@@ -1,0 +1,54 @@
+/*--------------------SBX - TAG Cloud---------------|START---------*/
+.SBX-TagCloud .dc-top-tags.dc-tag-list h2 {
+    margin: 0 !important;
+}
+.SBX-TagCloud .dc-top-tags.dc-tag-list {
+    background: #fff;
+    margin-top: 24px;
+    padding: 22px;
+}
+.SBX-TagCloud .dc-all-tags-container {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+    margin-bottom: 28px;
+}
+.SBX-TagCloud .dc-all-tags-container h2 {
+    float: left;
+    width: 50%;
+}
+.SBX-TagCloud .dc-all-tags-container a.tag-view-all-btn {
+    float: right;
+}
+.SBX-TagCloud .dc-all-tags-container ~ a {
+    border: solid 1px #e6e6e6;
+    border-radius: 24px;
+    display: inline-block;
+    padding: 10px !important;
+    color: #2b2b2b !important;
+    margin-bottom: 12px;
+    margin-right: 4px;
+}
+.SBX-TagCloud .dc-all-tags-container ~ a:nth-child(10) ~ a {
+    display: none;
+}
+.SBX-TagCloud .dc-all-tags-container a.tag-view-all-btn {
+    padding: 5px;
+}
+.SBX-TagCloud .dc-all-tags-container ~ a.show {
+    display: inline-block !important;
+}
+.SBX-TagCloud .all-tags-container{
+    display:flex;
+    justify-content: space-between;
+}
+.SBX-TagCloud .dc-top-tags.dc-tag-list {
+    margin-top: 71px;    /*-------------------Changes Made by v-viksh ----------*/
+}
+
+
+ @media(max-width:767px){
+    .blogs-postlist .SBX-TagCloud .dc-top-tags.dc-tag-list {
+        /*margin-top: 54px;*/  /*-------------------Changes Made by v-rajetl regarding bug#11245----------*/
+    }
+}
+/*--------------------SBX - TAG Cloud---------------|END---------*/

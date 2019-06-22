@@ -1,0 +1,1390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	WCF rest service to get post JSON data and retrieve JSON data with DataContract : www.dotnetmentors.com
+</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="language" content="english"><link href="https://plus.google.com/+Dotnetmentors" rel="publisher"><link rel="icon" href="http://dotnetmentors.com/favicon.ico">
+    <script async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/analytics.js"></script><script src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/ca-pub-1906845977726565.js"></script><script src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/cbgapi.loaded_1" async=""></script><script src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/cbgapi.loaded_0" async=""></script><script id="facebook-jssdk" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/sdk.js"></script><script type="text/javascript" async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/cse.js"></script><script type="text/javascript" async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/platform.js" gapi_processed="true"></script><script type="text/javascript">var link = document.createElement("link"); link.type = "text/css"; link.rel = "stylesheet"; link.href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"; document.getElementsByTagName("head")[0].appendChild(link)</script><link type="text/css" rel="stylesheet" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/bootstrap.css">
+    <script type="text/javascript">var link = document.createElement("link"); link.type = "text/css"; link.rel = "stylesheet"; link.href = "http://getbootstrap.com/examples/blog/blog.css"; document.getElementsByTagName("head")[0].appendChild(link)</script><link type="text/css" rel="stylesheet" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/blog.htm">
+    <script type="text/javascript">var link = document.createElement("link"); link.type = "text/css"; link.rel = "stylesheet"; link.href = "http://dotnetmentors.com/Styles/Site.min.css"; document.getElementsByTagName("head")[0].appendChild(link)</script><link type="text/css" rel="stylesheet" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/Site.css">
+    
+    
+    <link rel="canonical" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/wcf-rest-service-to-get-or-post-json-data-and-retrieve-j_003.htm">
+<meta name="og:title" content="WCF rest service to get post JSON data and retrieve JSON data with DataContract : www.dotnetmentors.com"><meta name="og:description" content="In this article I will talk about creating WCF RESTful services for CRUD operations
+  which uses JSON and DataContracts. CRUD operations are done by http verbs GET, POST,
+  PUT and DELETE."><meta name="og:type" content="blog"><meta name="og:url" content="http://dotnetmentors.com/wcf/wcf-rest-service-to-get-or-post-json-data-and-retrieve-json-data-with-datacontract.aspx"><meta name="twitter:title" content="WCF rest service to get post JSON data and retrieve JSON data with DataContract : www.dotnetmentors.com"><meta name="twitter:description" content="In this article I will talk about creating WCF RESTful services for CRUD operations
+  which uses JSON and DataContracts. CRUD operations are done by http verbs GET, POST,
+  PUT and DELETE."><meta name="twitter:url" content="http://dotnetmentors.com/wcf/wcf-rest-service-to-get-or-post-json-data-and-retrieve-json-data-with-datacontract.aspx"><meta name="description" content="In this article I will talk about creating WCF RESTful services for CRUD operations
+  which uses JSON and DataContracts. CRUD operations are done by http verbs GET, POST,
+  PUT and DELETE."><meta name="keywords" content="WCF REST service, JSON, REST, CRUD with REST and JSON, WCF REST service with JSON and DataContract"><script src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/jsapi" type="text/javascript"></script><link type="text/css" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/defaulten.css" rel="stylesheet"><link type="text/css" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.css" rel="stylesheet"><script type="text/javascript" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/defaulten.js"></script><link rel="preload" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/integrator.js" as="script"><script type="text/javascript" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/integrator.js"></script><link rel="preload" href="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/integrator_002.js" as="script"><script type="text/javascript" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/integrator_002.js"></script><style type="text/css">.gsc-control-cse{font-family:Arial, sans-serif;border-color:#FFFFFF;background-color:#FFFFFF}.gsc-control-cse .gsc-table-result{font-family:Arial, sans-serif}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D9D9D9}input.gsc-search-button,input.gsc-search-button:hover,input.gsc-search-button:focus{border-color:#666666;background-color:#CECECE;background-image:none;filter:none}.gsc-tabHeader.gsc-tabhInactive{border-color:#E9E9E9;background-color:#E9E9E9}.gsc-tabHeader.gsc-tabhActive{border-color:#FF9900;border-bottom-color:#FFFFFF;background-color:#FFFFFF}.gsc-tabsArea{border-color:#FF9900}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#0000CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0000CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0000CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#0000CC}a.gsc-trailing-more-results:link{color:#0000CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#E9E9E9;background-color:#FFFFFF;color:#0000CC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#FF9900;background-color:#FFFFFF;color:#0000CC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#0000CC}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#0000CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}</style><script src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/jsapi_002" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style><script type="text/javascript" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/a.htm"></script></head>
+<body>
+    <div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="http://staticxx.facebook.com/connect/xd_arbiter/r/lY4eZXm_YWu.js?version=42#channel=f348201227de024&amp;origin=http%3A%2F%2Fdotnetmentors.com" frameborder="0"></iframe><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/lY4eZXm_YWu_002.htm" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+
+    <form method="post" action="./wcf-rest-service-to-get-or-post-json-data-and-retrieve-json-data-with-datacontract.aspx" id="Form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0ODExODU3MDFkZMDWs9vgOwq+WMGn0cqV4ZgoxJB0BYyBh5n04xUvJAws" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="50A32384" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATyUqFzSTlczWhSdpVuP6pq3a9WYwkrvusyOAZyth/I0C9k7UkwJkb9fLL1YRTjwRusxFqXmN3jEEgFUb+/AHoMqYXbXB0AcYfKLyNG3av2Mkw+Lsh2hn9tvQrwBRex/fY=" type="hidden">
+</div>
+        <div class="blog-masthead">
+            
+
+<script type="text/javascript">
+
+    function SearchArticles() {
+        var searchString = 'http://dotnetmentors.com/SearchResults.aspx?q=' + $('#txtSearch').val();
+        window.location.href = searchString;
+    }    
+
+</script> 
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://dotnetmentors.com/">dot net mentors</a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="http://dotnetmentors.com/">Home<span class="sr-only">(current)</span></a></li>                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="http://dotnetmentors.com/Category.aspx/wcf/1">WCF</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/asp-net/3">ASP.NET</a></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/asp-net-mvc/5">ASP.NET MVC</a></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/asp-net-web-api/7">ASP.NET Web API</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/c-sharp/2">C-Sharp</a></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/adonet/9">ADO.Net</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/reporting/6">Reporting</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://dotnetmentors.com/Category.aspx/sql/8">SQL</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input id="txtSearch" class="form-control ui-autocomplete-input" placeholder="Search" autocomplete="off" type="text">
+                </div> 
+                <input id="btnSearch" class="btn btn-default" value="Search" onclick="SearchArticles()" type="button">                
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://dotnetmentors.com/Account/Login.aspx">Log in</a></li>
+                        </ul>
+                    
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+        </div>
+        <div class="container">
+            <div class="row">
+                
+    <div class="blog-header">
+        <h1 class="blog-title title">WCF rest service to get post JSON data and retrieve JSON data with DataContract
+        </h1>
+        <p>
+            In this article I will talk about creating WCF RESTful services for CRUD operations
+                which uses JSON and DataContracts. CRUD operations are done by http verbs GET, POST,
+                PUT and DELETE.
+        </p>
+        <br>
+        <h3>Introduction to REST</h3>
+        <p>
+            REST stands for <b>Representational State Transfer</b>. It provides you an architectural
+                principles about how client and service can exchange the resources over http. REST
+                services can be accessed by any language which support http communication and help
+                truly to heterogeneous applications. As it is sessionless, stateless resource based
+                mechanism it significantly reduces message size and increases performance. It provides
+                REST API for CRUD operations and transfers JSON, XML or both. See more details on
+                <a href="http://dotnetmentors.com/web-api/rest-based-crud-operations-with-asp-net-web-api.aspx">RESTful CRUD operations using ASP.NET Web API</a>.
+        </p>
+    </div>
+
+            </div>
+            <div class="row">                
+                <!-- leaderboard -->
+                <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1906845977726565" data-ad-slot="6158121932" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:728px;height:90px;" width="728" height="90" frameborder="0"></iframe></ins></ins></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>                
+            </div>
+            <div class="row">
+                <div class="col-sm-8 blog-main">                    
+                     
+
+    <div class="blog-post">
+        <br>
+        <h3>Introduction to JSON</h3>
+        <p>
+            JSON stands for <b>JavaScript Object Notation</b>. It is lightweight data exchange
+        format. It does not create lengthy tags like XML and produce human readable clean
+        data. JSON is completely language independent. It gives you a collection of Name/value
+        pair. The data member names must be a valid JSON string and included in quotation
+        marks or apostrophes. If you are not using reserved JavaScript keyword you may omit
+        the quotation marks or apostrophes.
+        </p>
+        <br>
+        <h3>Follow below steps to implement WCF RESTful service with JSON and DataContract
+        </h3>
+        <br>
+        <h3>Create WCF RESTful service</h3>
+        <p>
+            Follow the article <a href="http://dotnetmentors.com/wcf/how-to-create-wcf-restful-services.aspx">how to create wcf restful services</a> to understand what is RESTful services,
+            when to use which http verbs and nature of RESTful services.
+        </p>
+        <br>
+        <h3>Create Orders DataContract for your RESTful OrderService</h3>
+        <p>
+            Create a <a href="http://dotnetmentors.com/wcf-data-contract-attribute.aspx">DataContract</a>
+            Orders which will be used for exchanging orders information between service and
+            client. Add below OrderData contract to the RESTfulWCFService application created
+            in previous step.
+        </p>
+        <pre>                <code>
+using System.Runtime.Serialization;
+
+namespace RESTFulWCFService
+{
+    [DataContract]
+    public class OrderContract
+    {
+        [DataMember] 
+        public string OrderID { get; set; }
+
+        [DataMember] 
+        public string OrderDate { get; set; }
+
+        [DataMember] 
+        public string ShippedDate { get; set; }
+
+        [DataMember] 
+        public string ShipCountry { get; set; }
+
+        [DataMember] 
+        public string OrderTotal { get; set; }
+    }
+}</code>
+            </pre>
+        <br>
+        <h3>Orders data store</h3>
+        <p>
+            Download <a href="http://dotnetmentors.com/CodeFiles/Orders.xml">Orders</a> xml
+            file and put it in C: drive. The CRUD operations will be performed on this xml file
+            using REST calls.
+        </p>
+        <br>
+        <h3>REST OrderService</h3>
+        <p>
+            Add OrderService to your application. Right click on RESTFulWCFService application
+            from solution explorer -&gt; Select <b>Add </b>-&gt; Select <b>New Item </b>-&gt; Select
+            <b>WCF Service </b>-&gt; Name it as <b>OrderService.</b>
+        </p>
+        <p>
+            It will add two files <b>OrderService.svc and IOrderService.cs </b>
+        </p>
+        <br>
+        <h3>Order ServiceContract</h3>
+        <p>
+            Open IOrderService <a href="http://dotnetmentors.com/wcf-service-contract-attribute.aspx">ServiceContract</a>. Add below <a href="http://dotnetmentors.com/wcf-operation-contract-attribute.aspx">OperationContracts</a> to OrderService with <b>WebGet or WebInvoke</b> to
+            make the service as RESTful.
+        </p>
+        <p>
+            Notice following attributes for <b>WebGet or WebInvoke</b>
+        </p>
+        <ul>
+            <li><b>UriTemplate: </b>The corresponding Operation will be served with matching Uri.</li>
+            <li><b>RequestFormat: </b>Tells the format of request is XML or JSON.</li>
+            <li><b>ResponseFormat: </b>Tells the format of response is XML or JSON </li>
+            <li><b>Method: </b>WebInvoke has the Method attribute. The value for this could be PUT,
+                    POST, DELETE. WebGet does not have this attribute as it is used only for http verb
+                    GET.</li>
+        </ul>
+        <pre>                <code>
+using System.ServiceModel.Web;
+
+namespace RESTFulWCFService
+{   
+    [ServiceContract]
+    public interface IOrderService 
+    {
+        [OperationContract]
+        [WebGet(UriTemplate = "/GetOrderTotal/{OrderID}",
+            ResponseFormat= WebMessageFormat.Json)]
+        string GetOrderTotal(string OrderID);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/GetOrderDetails/{OrderID}", 
+            RequestFormat=WebMessageFormat.Json,            
+            ResponseFormat = WebMessageFormat.Json)]
+        OrderContract GetOrderDetails(string OrderID);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/PlaceOrder", 
+            RequestFormat= WebMessageFormat.Json,   
+            ResponseFormat = WebMessageFormat.Json, Method = "POST")] 
+        bool PlaceOrder(OrderContract order);
+    }
+}</code>
+            </pre>
+        <br>
+        <h3>Order ServiceContract implementation</h3>
+        <p>
+            Open OrderService.cs and implement operations from IOrderService.
+        </p>
+        <ul>
+            <li><b>GetOrderTotal: </b>method is WebGet operation for getting OrderTotal of particular
+                    OrderID.</li>
+            <li><b>GetOrderDetails: </b>method is WebGet operation for getting Order Details of
+                    particular OrderID. It takes the OrderID and returns corresponding OrderDetails
+                    in form of OrderContract DataContract.</li>
+            <li><b>PlaceOrder: </b>method is WebInvoke operation and performs the Create of CRUD
+                    operations. It takes OrderContract as input parameter and add its details to Orders.xml</li>
+        </ul>
+        <pre>                <code>
+using System.Xml.Linq;
+using System.Collections;
+
+namespace RESTFulWCFService
+{    
+    public class OrderService : IOrderService
+    {
+        public string GetOrderTotal(string OrderID)
+        {
+            string orderTotal = string.Empty;
+
+            try
+            {
+                XDocument doc = XDocument.Load("C:\\Orders.xml");
+
+                orderTotal =
+                (from result in doc.Descendants("DocumentElement")
+                .Descendants("Orders")
+                    where result.Element("OrderID").Value == OrderID.ToString()
+                    select result.Element("OrderTotal").Value)
+                .FirstOrDefault&lt;string&gt;();
+
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException&lt;string&gt;
+                        (ex.Message);
+            }
+            return orderTotal;
+        }
+
+        public OrderContract GetOrderDetails(string OrderID)
+        {
+            OrderContract order = new OrderContract();
+
+            try
+            {
+                XDocument doc = XDocument.Load("C:\\Orders.xml");
+                
+                IEnumerable&lt;XElement&gt; orders =
+                    (from result in doc.Descendants("DocumentElement")
+                        .Descendants("Orders")
+                    where result.Element("OrderID").Value == OrderID.ToString()
+                    select result);
+
+                order.OrderID = orders.ElementAt(0)
+                                            .Element("OrderID").Value;
+                order.OrderDate = orders.ElementAt(0)
+                                            .Element("OrderDate").Value;
+                order.ShippedDate = orders.ElementAt(0)
+                                            .Element("ShippedDate").Value; 
+                order.ShipCountry = orders.ElementAt(0)
+                                            .Element("ShipCountry").Value; 
+                order.OrderTotal = orders.ElementAt(0)
+                                            .Element("OrderTotal").Value; 
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException&lt;string&gt;
+                        (ex.Message);
+            }
+            return order;
+        }
+
+        public bool PlaceOrder(OrderContract order)
+        {
+            try
+            {
+                XDocument doc = XDocument.Load("C:\\Orders.xml");
+
+                doc.Element("DocumentElement").Add(
+                        new XElement("Products",
+                        new XElement("OrderID", order.OrderID),
+                        new XElement("OrderDate", order.OrderDate),
+                        new XElement("ShippedDate", order.ShippedDate),
+                        new XElement("ShipCountry", order.ShipCountry),
+                        new XElement("OrderTotal", order.OrderTotal)));
+
+                doc.Save("C:\\Orders.xml");
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException&lt;string&gt;
+                        (ex.Message);
+            }
+            return true;
+        }
+    }
+}</code>
+           </pre>
+        <br>
+        <h3>WCF RESTful Service endpoint Configuration</h3>
+        <p>
+            WCF RESTful Service endpoint Configuration is about similar to normal endpoints.
+            Notice that we are using <a href="http://dotnetmentors.com/wcf/when-to-use-which-binding-in-wcf.aspx">webHttpBinding</a>.
+        </p>
+        <p>
+            We added the <b>endpointBehaviors</b> for webHttp settings. Add below service endpoints.
+        </p>
+        <pre>                <code>
+ &lt;system.serviceModel&gt;
+    &lt;serviceHostingEnvironment multipleSiteBindingsEnabled="true" /&gt;    
+      
+      &lt;service behaviorConfiguration="Default" 
+            name="RESTFulWCFService.OrderService"&gt;
+        &lt;endpoint address="" behaviorConfiguration="webBehavior" 
+                binding="webHttpBinding" 
+                contract="RESTFulWCFService.IOrderService" /&gt;
+        
+        &lt;endpoint contract="IMetadataExchange" binding="mexHttpBinding" 
+                        address="mex" /&gt;
+      
+      &lt;/service&gt;
+    &lt;/services&gt;
+    &lt;behaviors&gt;
+        &lt;endpointBehaviors&gt;
+            &lt;behavior name="webBehavior"&gt;
+                &lt;webHttp helpEnabled="true" /&gt;
+            &lt;/behavior&gt;
+        &lt;/endpointBehaviors&gt;
+        &lt;serviceBehaviors&gt;
+            &lt;behavior name="Default"&gt;
+                &lt;serviceMetadata httpGetEnabled="true" /&gt;
+            &lt;/behavior&gt;
+            &lt;behavior name=""&gt;
+                &lt;serviceMetadata httpGetEnabled="true" /&gt;
+                &lt;serviceDebug includeExceptionDetailInFaults="false" /&gt;
+            &lt;/behavior&gt;
+        &lt;/serviceBehaviors&gt;
+    &lt;/behaviors&gt;
+&lt;/system.serviceModel&gt;</code>
+            </pre>
+        <br>
+        <h3>View your OrderService</h3>
+        <p>
+            Right click on OrderService.svc and select <b>View in browser</b>. You may enter
+            the below url in browser
+        </p>
+        <p>
+            http://localhost:61090/OrderService.svc/GetOrderDetails/10250
+        </p>
+        <p>
+            <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/OrderServiceREST.png" alt="WCF RESTful Product Service result">
+        </p>
+        <p>
+            Notice that DataMember attributes are shown in alphabetically order. You may set
+            it using DataMembers Order property. <a href="http://dotnetmentors.com/data-member-attributes-and-enum-member-attributes-of-wcf-data-contract.aspx">Click here to know more about DataMember and enum member attributes.</a>
+        </p>
+        <br>
+        <h3>Client application for RESTful OrderService</h3>
+        <p>
+            Add console application to your solution. Add a reference to WCFServices where OrderService
+            is. Add below client code in console application.
+        </p>
+        <pre>                <code>
+using System.Net;
+using System.Runtime.Serialization.Json;
+using RESTFulWCFService;
+
+namespace DotnetmentorsClient
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GetOrderDetails("10248");
+            GetOrderTotal("10250");
+            PlaceOrder(); 
+            Console.ReadKey(true);
+        }
+
+        private static void GetOrderDetails(string orderID)
+        {
+            WebClient proxy = new WebClient();
+            string serviceURL = 
+                    string.Format("http://localhost:61090/OrderService.svc
+                                    /GetOrderDetails/{0}", orderID); 
+            byte[] data = proxy.DownloadData(serviceURL);
+            Stream stream = new MemoryStream(data);
+            DataContractJsonSerializer obj = 
+                        new DataContractJsonSerializer(typeof(OrderContract));
+            OrderContract order = obj.ReadObject(stream) as OrderContract;
+            Console.WriteLine("Order ID : " + order.OrderID);
+            Console.WriteLine("Order Date : " + order.OrderDate);
+            Console.WriteLine("Order Shipped Date : " + order.ShippedDate);
+            Console.WriteLine("Order Ship Country : " + order.ShipCountry);
+            Console.WriteLine("Order Total : " + order.OrderTotal);
+        }
+
+        private static void GetOrderTotal(string orderID)
+        {
+            Console.WriteLine();  
+            Console.WriteLine("**** Output for GetOrderTotal ************");  
+            WebClient proxy = new WebClient();
+            string serviceURL = 
+                    string.Format("http://localhost:61090/OrderService.svc
+                                    /GetOrderTotal/{0}", orderID);
+            byte[] data = proxy.DownloadData(serviceURL);
+            Stream stream = new MemoryStream(data);
+            DataContractJsonSerializer obj = 
+                        new DataContractJsonSerializer(typeof(string));
+            string order = Convert.ToString(obj.ReadObject(stream));
+            Console.WriteLine(order);
+        }
+
+        private static void PlaceOrder()
+        {            
+            OrderContract order = new OrderContract
+            {
+                OrderID = "10550",
+                OrderDate = DateTime.Now.ToString(),
+                ShippedDate = DateTime.Now.AddDays(10).ToString(),
+                ShipCountry = "India",
+                OrderTotal = "781"
+            };      
+      
+            DataContractJsonSerializer ser = 
+                    new DataContractJsonSerializer(typeof(OrderContract));
+            MemoryStream mem = new MemoryStream();
+            ser.WriteObject(mem, order);
+            string data = 
+                Encoding.UTF8.GetString(mem.ToArray(), 0, (int)mem.Length);
+            WebClient webClient = new WebClient();            
+            webClient.Headers["Content-type"] = "application/json";            
+            webClient.Encoding = Encoding.UTF8;
+            webClient.UploadString("http://localhost:61090/OrderService.svc
+                            /PlaceOrder", "POST", data);              
+            Console.WriteLine("Order placed successfully...");  
+        }
+    }
+}    </code>
+             </pre>
+        <p>
+            The client code for Operation PlaceOrder uses POST method which sends JSON data
+            to service. It uses DataContractJsonSerializer to serialize DataContract. We use
+            webClient.UploadString method to post data to service 
+        </p>
+        <p>
+            <a href="http://dotnetmentors.com/CodeFiles/RESTFulWCFServicewithJSON.rar" class="downloadCode">Download sourcecode</a>
+        </p>
+    </div>
+    <input name="ctl00$MainContent$hidArticleID" id="hidArticleID" value="17" type="hidden">
+                    
+                </div>
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <br>
+                        
+                                <h3><b class="colorb">Latest on Dotnetmentors.com</b></h3>
+                                <ul>
+                            
+                                <li><a href="http://dotnetmentors.com/sql/sql-server-constraints-with-examples.aspx">SQL Server Constraints with Example </a></li>
+                            
+                                <br>
+                            
+                                <li><a href="http://dotnetmentors.com/mvc/webgrid-example-in-asp-net-mvc.aspx">WebGrid Example In ASP.NET MVC</a></li>
+                            
+                                <br>
+                            
+                                <li><a href="http://dotnetmentors.com/sql/temporary-table-vs-table-variable.aspx">Temporary Table Vs Table Variable</a></li>
+                            
+                                <br>
+                            
+                                <li><a href="http://dotnetmentors.com/sql/sql-server-stored-procedure-vs-user-defined-function.aspx">SQL Server Stored Procedure VS User Defined Functions </a></li>
+                            
+                                <br>
+                            
+                                <li><a href="http://dotnetmentors.com/mvc/populate-mvc-listbox-using-jquery-getjson-and-jsonresult.aspx">Populate MVC Listbox using jQuery getJSON and JSONResult</a></li>
+                            
+                                </ul>                                        
+                            
+                    </div>
+                    <div class="sidebar-module">
+                        <div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/dotnetmentors" data-width="300" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=263&amp;header=true&amp;height=300&amp;href=https%3A%2F%2Fwww.facebook.com%2Fdotnetmentors&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false&amp;width=300"><span style="vertical-align: bottom; width: 300px; height: 214px;"><iframe name="f3068954f70394a" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like_box Facebook Social Plugin" style="border: medium none; visibility: visible; width: 300px; height: 214px;" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/like_box.htm" class="" width="300px" height="300px" frameborder="0"></iframe></span></div>
+                    </div>
+                    <div class="sidebar-module">
+                        <div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 106px;" id="___page_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" tabindex="0" vspace="0" id="I0_1512468260947" name="I0_1512468260947" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/page.htm" data-gapiattached="true" title="+Badge" width="100%" frameborder="0"></iframe></div>
+                    </div>
+                    <div class="sidebar-module">         
+                        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-1906845977726565" data-ad-slot="8335051531" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:300px;height:600px;" width="300" height="600" frameborder="0"></iframe></ins></ins></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 blog-main">  
+                    <p>
+                        
+
+</p><div>
+    <div style="padding:20px; " class="fb-like fb_iframe_widget" data-href="http://www.facebook.com/pages/Dotnetmentors/259811214164548" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=recommend&amp;app_id=&amp;container_width=750&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FDotnetmentors%2F259811214164548&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=450"><span style="vertical-align: bottom; width: 170px; height: 20px;"><iframe name="f1859b071d6a2a8" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 170px; height: 20px;" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/like.htm" class="" width="450px" height="1000px" frameborder="0"></iframe></span></div>
+    
+    <div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;" id="___plusone_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I1_1512468260959" name="I1_1512468260959" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/fastbutton.htm" data-gapiattached="true" title="G+" width="100%" frameborder="0"></iframe></div>
+</div>
+
+                     <p></p>
+                    <p>
+                         <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1906845977726565" data-ad-slot="6654098732" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:300px;height:250px;" width="300" height="250" frameborder="0"></iframe></ins></ins></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </p>   
+                </div>                
+            </div>
+            <div class="row">
+                <div class="commentBox">
+                    <span class="commentlabel"><b>Speak your mind : </b></span>
+                </div>
+                <div>
+                    <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/leave_comment.png" alt="Leave a comment for this article on dotnetbloogers.com" class="commentImage">
+                    <textarea name="ctl00$txtComment" rows="2" cols="20" id="txtComment" style="height:100px;width:70%;"></textarea>
+                </div>
+                <div class="floatRight">
+                    <input name="ctl00$btnSubmitComment" value="Submit" id="btnSubmitComment" type="submit">
+                </div>
+            </div>
+            <div class="row">
+                
+                        <table class="commentTable">
+                    
+                        <tbody><tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Robin
+                                        at
+                                        10/15/2013 5:12:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            How to Create 
+WCFRESTFulService with jSon to perform CRUD operations on SQL Server DB .
+Please forward me example for it on patilrobin420@gmail.com
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        10/15/2013 9:12:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            @Robin,
+You can use the same methods however you have replace the actual code 
+which talks to your SQL Server through SQLConnection and SQLCommand
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        jagadish
+                                        at
+                                        12/4/2013 7:02:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi Its a very good example 
+but un fortunately i am getting an error when i post the data it give me
+ error "The remote server returned an error: (400) Bad Request." pls can
+ you help me out
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        siddu
+                                        at
+                                        1/2/2014 7:16:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            PlaceOrder() throws the 
+error "The remote server returned an error: (400) Bad Request."
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        1/3/2014 12:53:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            @Viii, "The remote server 
+returned an error: (400) Bad Request." error comes because client sends 
+data more than set for maxReceivedMessageSize,
+<br>
+Try to change your server side config file  and set maxReceivedMessageSize = 65536000
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        sujil
+                                        at
+                                        7/29/2014 7:16:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            helo
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Mehul
+                                        at
+                                        8/19/2014 5:13:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi,
+
+I am also facing error "The remote server returned an error: (400) Bad Request." at PlaceOrder().
+does setting up value solve the problem maxReceivedMessageSize ?!
+How/where to set maxReceivedMessageSize in web.config?
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        10/29/2014 9:04:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            If I want to just a post a 
+string (128 characters long), which will be parsed at server, how can I 
+pass it? Is it even possible?
+All I care about post the data which is string.
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        10/30/2014 12:48:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            @Max
+you can certainly do it ... just make a operation contract which accept a string 
+see below operation contract
+
+[OperationContract]
+[WebInvoke(UriTemplate = "/PlaceOrder", 
+RequestFormat= WebMessageFormat.Json,   
+ResponseFormat = WebMessageFormat.Json, Method = "POST")] 
+            bool PlaceOrder(string ordernumber);
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        10/31/2014 8:00:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Thanks Laxmikant for quick response.
+Is that also possible to pass more than 1 parameter?
+Also how do I add reference in client when client and service are not in single solution?
+Is there also a way to pass parameters other than json format?
+Thanks,
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        10/31/2014 9:32:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            @Max 1. you can have 
+multiple parameters as input with this you also have to configure 
+UriTemplate accordingly number of parameters.  2. You can update the 
+ServiceUrl and call proxy.DownloadData() function which may be or may 
+not be in same solution. 3. You can also have XML as Request / Response 
+format.
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        10/31/2014 7:03:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            I see that we can also set 
+the property of object as you did in your example and that way i can set
+ additional parameter in the property. 
+So is it possible to pass order object from separate project? 
+Thanks for your help.
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        11/4/2014 9:46:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi Laxmikant,
+Any suggestion for my last post?
+Thanks,
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        11/4/2014 9:46:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi Laxmikant,
+Any suggestion for my last post?
+Thanks,
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        max
+                                        at
+                                        11/4/2014 9:46:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi Laxmikant,
+Any suggestion for my last post?
+Thanks,
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Mohan
+                                        at
+                                        3/24/2015 5:31:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            how to retrieve Particular data from JSON file. Thank u
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Mohan
+                                        at
+                                        3/24/2015 5:32:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            JSON filter based upon Condition
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        yashashishverma
+                                        at
+                                        4/2/2015 5:18:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Hi,
+I refer your code but the problem is that i am not getting any value at service side while placing order.
+Please suggest some solutions.
+
+Thank you
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        4/2/2015 10:01:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            are you using the webclient 
+and datacontract to place order or calling using jQuery Ajax calls.
+Please download the code and try.
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        yashashishverma
+                                        at
+                                        4/2/2015 9:57:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            I did same as you except I 
+put the service and client in different projects whereas both project 
+have their own OrderContract class. But the issue is same, i.e. I did 
+not get any value at the service side.
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        4/8/2015 1:33:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            if you have use different 
+projects for web api and client then you will have to enable cors at web
+ api and use JSONP protocol while making ajax calls
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        FiFa
+                                        at
+                                        6/11/2015 2:05:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            The restful WCF integration 
+model is really messy in terms of configuration paradigm and thus 
+fraught with lots of if's and buts.
+
+Anyways, if anybody wants to know why you can get (400) bad request is 
+generic error, it is because the solution is hardcoded to check for 
+Order.xml from c:\ drive. As soon as you correct the location, the 
+solution should work like a charm.
+My experience on the WWF stack was better then WCF, specially the REST 
+on WCF is not very intuitive and defined for developers. Too many 
+what-iff's.
+
+But this is one solution among maybe 15-20 i saw and the comments from 
+others which helped me tackle some of the ghost in my config to support 
+both Soap and Rest on the same Service. Kudos to the author
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        6/13/2015 7:03:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Thanks FiFa for providing 
+your experience. Have you change to relative path to Orders.xml?
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        sheethal
+                                        at
+                                        6/1/2016 11:58:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Useful information thank you
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        sheethal
+                                        at
+                                        6/1/2016 12:00:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            A very useful piece of information thank you
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        jike
+                                        at
+                                        8/17/2016 12:36:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            do i need url of incoming REST JSON data before i can read it using vb.net
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        antoniofs.sp
+                                        at
+                                        6/1/2017 2:24:00 PM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            A very useful piece of information thank you, congratulations...
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Festus
+                                        at
+                                        10/1/2017 5:53:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Kindly help me understand 
+where you have setup the port number 61090. I would like to use port 
+8090 instead. Kindly help me.
+Festus
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="commentProfilePic">
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/default.png" alt="User profile picture on dotnetmentors.com">
+                            </td>
+                            <td class="comment">
+                                <div style="background-image: url('http://dotnetmentors.com/Images/comment_bg.png'); min-height: 100px; width: 560px;">
+                                    <br>
+                                    <div style="margin: 0px 20px 0px 30px">
+                                        <span>by
+                                        Laxmikant
+                                        at
+                                        10/1/2017 6:29:00 AM
+                                        </span>
+                                        <br>
+                                        <span>
+                                            Festus, that is just random 
+number chosen by service, if you hasted service in IIS you can change 
+port in add site bindings or if you have not hosted you can update 
+project properties to set port
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/comment_bottom.png" alt="post comment on dotnetmentors.com">
+                            </td>
+                        </tr>
+                    
+                        </tbody></table>
+                    
+            </div>
+            <div class="footer">
+                <div id="ucFooter_PanelLink">
+	
+    <a href="http://dotnetmentors.com/aboutus.aspx" class="footerlinks">About Us</a> 
+    <a href="http://dotnetmentors.com/contactus.aspx" class="footerlinks">Contact Us</a> 
+    <a href="http://dotnetmentors.com/privacy-policy.aspx" class="footerlinks">Privacy Policy</a> 
+
+</div>
+
+            </div>
+        </div>
+    </form>
+    <script async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/jquery.js" type="text/javascript"></script>
+    <script async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/jquery-ui.js" type="text/javascript"></script>
+    <script async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/bootstrap.js" type="text/javascript"></script>
+    <script async="" type="text/javascript" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/adsbygoogle.js"></script>
+    <script async="" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/dotnetmentors.js" type="text/javascript"></script>
+
+
+    <script async="" type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    <script async="" type="text/javascript">
+        (function () {
+            var cx = '011488099208709796710:in0wl2s-luu';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+    <script async="" type="text/javascript">        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<iframe name="oauth2relay2114776811" id="oauth2relay2114776811" src="WCF%20rest%20service%20to%20get%20post%20JSON%20data%20and%20retrieve%20JSON%20data%20with%20DataContract%20%20%20www.dotnetmentors.com_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>

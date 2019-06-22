@@ -1,0 +1,546 @@
+﻿/*-----------------------Default CSS For Our Page-----------------|START---------*/
+.pipe-blue{
+color: #007F88 !important;
+}
+body{
+     font-family: "Segoe UI",Tahoma,Arial,sans-serif;
+     font-size: 18px;
+     line-height: 1.2;
+     font-weight: normal;
+     font-style: normal;
+     font-stretch: normal;
+}
+
+ h1,h2,h3,h4,h5,h6{
+     font-family: "Segoe UI",Tahoma,Arial,sans-serif;
+     line-height: 1.2;
+     color: #303131;
+     font-weight: 300;
+     margin: 0;
+}
+ /*Added by Vandana to make defaut spacing on legacy pages*/
+:not(.sbx-migrated) h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ /*End by Vandana singh*/
+    /*-------------Default---------|START---*/
+    h1, .h1 {
+        font-size: 36px !important;
+    }
+ h2,.h2{
+     font-size: 34px;
+}
+ h3,.h3{
+     font-size: 32px;
+}
+ h4,.h4{
+     font-size: 24px;
+}
+ h5,.h5{
+     font-size: 20px;
+}
+ h6,.h6{
+     font-size: 18px;
+}
+
+ body .custom-container a:not(.btn-normal){
+     color: #007F88;
+     font-size: 15px;
+     text-decoration: none;
+}
+ body .custom-container a:not(.btn-normal):hover{
+     text-decoration: underline;
+}
+ p{
+     font-size: 15px;
+     color: #767676;
+}
+ p.large{
+     font-size: 18px;
+     color: #2b2b2b;
+     line-height: 1.33;
+}
+.dc-hwb-heading h3 {
+    line-height: normal;
+}
+/*-------------Default---------|END---*/
+/*-------------Button---------|START---*/
+ .btn-normal{
+     background: #00b6c3 !important;
+     padding: 14px 24px !important;
+     display: inline-block !important;
+     color: #000000 !important;
+     font-size: 13px !important;
+     letter-spacing: 1px !important;
+     cursor:pointer !important;
+     line-height: 1 !important;
+}
+ .btn-normal:hover{
+     background: #ffffff;
+}
+ .darker:hover{
+     background: #1a1a1a;
+     color: #FFFFFF;
+}
+/*.btn-normal:focus{
+     background-color: #002050;
+     color: #FFFFFF;
+     outline: 2px #00B7C3 solid;
+}
+*/
+/*written at bottom*/
+ .btn-normal:before{
+}
+/*-------------Button---------|END---*/
+/*-------------Input---------|START---*/
+ input[type="text"], input[type="search"]{
+     border: solid 1px #a3a2a2;
+    /*display: block;
+    */
+     font-size: 15px;
+     color: #000000;
+}
+.custom-container input[type="radio"]:focus,
+.custom-container input[type="checkbox"]:focus {
+    outline: 1px dashed #000;
+    outline-offset: 0px !important;
+}
+.dc-two-col-with-btn-wrapper {
+    margin-top: 50px;
+}
+/*-------------Input---------|END---*/
+/*-------------Tags & Paginations---------|START---*/
+/*ul.tag{
+     display: block;
+     padding-left: 0;
+     margin: 0;
+}
+ ul.tag > li{
+     display: inline-block;
+     border-radius: 24px;
+     background-color: rgba(255, 255, 255, 0.12);
+     border: solid 1px #e6e6e6;
+     padding: 4px 6px;
+     margin-right:4px;
+}
+ ul.tag > li > a{
+     display: inline-block;
+     font-size: 15px;
+     color: #2b2b2b;
+}
+ ul.pagination{
+     display: block;
+     padding-left: 0;
+     margin: 0;
+}
+ ul.pagination > li{
+     display: inline-block;
+     background-color: rgba(255, 255, 255, 0.12);
+     border: solid 1px #00b6c3;
+     padding: 12px 15px;
+     margin-right:4px;
+}
+ ul.pagination > li > a{
+     display: inline-block;
+     font-size: 18px;
+     color: #2b2b2b;
+}
+*/
+/*adding standalone tag and pagination class iff structure is not defined in ul and li*/
+ .dc-tag{
+     display: inline-block;
+     border-radius: 24px;
+     background-color: #fff !important;
+     border: solid 1px #e6e6e6;
+     padding: 4px 6px;
+     margin-right:4px;
+     font-size: 15px;
+     color: #2b2b2b !important;
+}
+ .dc-pagination{
+     display: inline-block;
+     background-color: rgba(255, 255, 255, 0.12) important;
+     border: solid 1px #00b6c3 important;
+     padding: 12px 15px important;
+     margin-right:4px important;
+     font-size: 18px important;
+     color: #2b2b2b !important;
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+}
+/*-------------Tags & Paginations---------|END---*/
+/*-------------USER---------|START---*/
+ .user{
+     border-radius: 100%;
+     display: inline-block;
+     position: relative;
+}
+ .user.isOnline{
+     width: 5px;
+     height: 5px;
+     border-radius: 100%;
+     position: absolute;
+     bottom: 5%;
+     right: 5%;
+}
+ .user.large{
+     width: 64px;
+     height: 64px;
+     
+}
+ .user.medium{
+     width: 44px;
+     height: 44px;
+}
+ .user.small{
+     width: 36px;
+     height: 36px;
+}
+/*-------------USER---------|END---*/
+/*-------------CENTER---------|START---*/
+ .center{
+     text-align: center;
+}
+ .right{
+     text-align: right;
+}
+ @media(min-width:768px){
+     .center{
+         text-align: center;
+    }
+     .right{
+         text-align: right;
+    }
+}
+ @media(max-width:767px){
+     .mob-center{
+         text-align: center !important;
+    }
+}
+.dc-forum-title-wrapper h1 {
+    font-size: 32px !important;
+}
+/*-------------CENTER---------|END---*/
+ @media(min-width:1800px){
+     .dc-panel-Content {
+         padding-left: 5% !important;
+         padding-right: 5% !important;
+    }
+     .wrap-dc-custom {
+         padding-left: 0 !important;
+    }
+     .wrap-dc-custom + aside {
+         padding-right: 0;
+    }
+}
+ [clear]:before,[clear]:after{
+     content:"";
+     display:block;
+     clear:both;
+}
+ .content-fragment-header {
+     display: none !important;
+}
+ .pad-48{
+	 /*Bug 11203:Remove the extra space from the top of the all up forums page*/
+     /*padding-top:48px;*/
+}
+ .pad-bottom-22{
+     /*Bug 11203:Remove the extra space from the top of the all up forums page
+	 padding-bottom:22px;
+	 */
+	 
+}
+ .pad-30{
+     padding-top:15px;
+}
+ .pad-bottom-30{
+     padding-bottom:15px;
+}
+ .pad-70{
+     padding-top:70px;
+}
+ .dc-four-col-wrapper .dc-date {
+     font-size: 20px;
+     font-weight: 300;
+     color: #2b2b2b;
+     display: block;
+     padding-bottom: 5px;
+}
+ .btn-normal.arrow:after {
+     display: inline-block;
+     margin-left: 4px;
+     margin-top: 1px;
+     content: "";
+     vertical-align: top;
+     font-family: "MWF-MDL2";
+}
+ .btn-normal:focus{
+     background-color: #FFF !important;
+     color: #000000 !important;
+     outline: 2px #000 dashed !important;
+     text-decoration: none;
+}
+ .btn-normal:hover{
+     background: #ffffff;
+     outline: 2px #000 solid !important;
+}
+ .cm-full-width-banner-wrapper .banner-content {
+     width: 100% !important;
+}
+ .p3 {
+     font-size: 20px;
+     color: #2b2b2b;
+     font-weight: 300;
+}
+ .pad-36{
+     padding-top:36px;
+}
+ .pad-65{
+     padding-top:65px;
+}
+ @media(max-width:767px){
+     .pad-25{
+         padding-top:25px;
+    }
+     .pad-bottom-25{
+         padding-bottom:25px;
+    }
+     .dc-panel-Content {
+         padding-left: calc(5% + 15px);
+         padding-right: calc(5% + 15px);
+    }
+}
+ @media(max-width:539px){
+     .dc-four-col-wrapper .commom-heading {
+         margin-bottom: 20px;
+    }
+     .dc-four-bg.commom-heading.equal-height {
+         margin-bottom: 0;
+    }
+     .pad-48.pad-bottom-22 {
+         padding: 10px 0;
+    }
+}
+ body .custom-container a:not(.btn-normal):focus {
+     outline: 1px dashed #000;
+     outline-offset: 1px !important;
+}
+ body .custom-container .avatar a:not(.btn-normal):focus, body .custom-container .user a:not(.btn-normal):focus {
+     outline: 1px dashed #000;
+}
+ .user > a {
+     display: block;
+}
+ .dc-user > a {
+     display: block;
+}
+ .avatar > a {
+     display: block;
+}
+ input[type="text"]:focus, input[type="search"]:focus {
+     border: 1px solid #757575;
+}
+ .btn-normal.disabled, .btn-normal[disabled], fieldset[disabled] .btn-normal {
+     background-color: #eee !important;
+     color: #808282 !important;
+     cursor: not-allowed;
+     pointer-events: none;
+     opacity: .65;
+     filter: alpha(opacity=65);
+     -webkit-box-shadow: none;
+     box-shadow: none;
+}
+.dc-four-col-outer-wrapper {
+    background: #002050 !important;
+}
+/*Added by Vandana*/
+.forum-thread-list .list-item .sticky-thread{
+    background-color:#004395 !important;
+    padding:15px 15px !important;
+    font-size:16px !important;
+    font-weight: 600 !important;
+}
+/*end Vandana*/
+/*-----------------------Default CSS For Our Page-----------------|END---------*/
+.custom-container {
+        padding: 0 5%;
+}
+@media (min-width: 1800px){
+    .custom-container {
+        max-width: 1600px;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 768px) and (max-width:1083px){
+    .custom-container {
+        padding:0px 24px;
+    }
+}
+@media(max-width:767px){
+    .custom-container {
+        padding: 0 15px;
+    }
+}
+
+
+/*-------------- Changes made by v-surysr-------------*/
+body .dc-four-col-wrapper > .custom-container > .row {
+    display: flex !important;
+}
+body .dc-four-col-wrapper > .custom-container > .row > div > div {
+    height: 100% !important;
+}
+body .dc-four-col-wrapper > .custom-container > .row div.dc-at-bottom {
+    margin-top: auto;
+    margin-bottom:0; 
+}
+body .dc-four-col-wrapper > .custom-container > .row > div {
+    width: 100% !important;
+    flex: 1;
+}
+body .dc-four-col-wrapper > .custom-container > .row > div > div.equal-height {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+body .dc-four-col-wrapper > .custom-container > .row div.dc-at-bottom .list-inline {
+    margin-bottom: 0;
+}
+@media(max-width:767px){
+    body .dc-four-col-wrapper > .custom-container > .row {
+        display: block !important;
+    }
+    body .dc-four-col-wrapper > .custom-container > .row > div:last-child > div {
+        margin-bottom: 0;
+    }
+}
+/*-------------- Changes made by v-surysr-------------*/
+
+/*-------------- Changes made by v-rajetl-------------*/
+.custom-container ul.list-inline{
+    display:flex;
+    justify-content: space-between;
+	padding:0;
+	line-height:normal;
+    margin-left:0;
+}
+.custom-container ul.list-inline li.cta a {
+    color: #2b2b2b;
+}
+.custom-container ul.list-inline li a:before {
+    margin-left: 0px !important;
+}
+.custom-container ul.list-inline li.social-share ul.dropdown-menu li a:before,
+.custom-container ul.list-inline li.cta a:before {
+    margin-left: -15px !important;
+}
+.custom-container ul.dc-pad-custom.list-inline.links, .custom-container ul.list-inline.meta.mob-center{
+    display: inline;
+}
+.action-toolbar>ul.list-inline>li.cta>a, .link-bar>ul.list-inline>li.cta>a {
+    background-color: #f26522 !important;
+	color: #2b2b2b;
+	padding:0 15px;
+}
+.custom-container .action-toolbar>ul>li>a:hover,
+.custom-container .action-toolbar>ul>li>span>a:hover,
+.custom-container .action-toolbar>ul>li>span>span>a:hover{
+	background-color: transparent;
+}
+
+@media (max-width:767px){
+	.custom-container .action-toolbar>ul.list-inline{
+        display: block;
+    }
+	.custom-container ul.list-inline{
+        display: block;
+    }
+}
+
+/*-------------------Pagination changes made by v-rajetl Start-----------------*/
+.custom-container a.next:after {
+    content: '';
+    font-family: "MWF-MDL2";
+    display: block;
+    color: #2b2b2b;
+}
+.custom-container a.previous:before {
+    content: '';
+    font-family: "MWF-MDL2";
+    display: block;
+    color: #2b2b2b;
+    transform:rotate(180deg);
+}
+.custom-container .pager{
+    margin-left:2px;
+}
+.custom-container .pager a.page.selected {
+    border: 1px solid #00b6c3;
+	background-color: #ffffff;
+}
+.custom-container a.next span,
+.custom-container a.previous span,
+.custom-container a.last span,
+.custom-container a.first span{
+    font-size: 0 !important;
+}
+.custom-container .pager.ui-page a{margin:2px 0;}
+.custom-container .pager.ui-page a.first span:before{
+    content: '\E892';
+    font-family: "MWF-MDL2";
+    /*position: absolute;*/
+    /*transform: rotate(180deg);*/
+    font-size: 17px;
+    /*left: 13px;*/
+    /*top:11px;*/
+    text-align:center;
+}
+
+.custom-container .pager.ui-page a.last span:after{
+    content: '\E893';
+    font-family: "MWF-MDL2";
+    /*position: absolute;
+    transform: rotate(180deg);*/
+    /*left: 13px;*/
+    /*top:11px;*/
+    font-size: 17px;
+    text-align:center;
+}
+
+
+.custom-container .pager > a span {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #2b2b2b;
+}
+body .custom-container .pager > a:hover,
+body .custom-container .pager a:hover{
+    text-decoration: none;
+}
+.custom-container .pager a.next>a, 
+.custom-container .pager a.next>span{
+    float:left;
+}
+.custom-container .custom-post-listing-pager a {
+    width: 42px;
+    height: 44px;
+    color: #2b2b2b;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 9px 0 10px;
+	border: 1px solid transparent;
+}
+
+
+.SBX-redesign-Forum-Thread .forum-thread .moderate-post a:hover{
+            color: #007F88;
+}
+/*-------------------Pagination changes made by v-rajetl End--------------------*/
+/*-------------- Changes made by v-rajetl-------------*/
+

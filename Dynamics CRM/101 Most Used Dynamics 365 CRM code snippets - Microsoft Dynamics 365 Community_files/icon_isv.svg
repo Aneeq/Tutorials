@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_isv</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_isv" fill="#00B6C3">
+            <path d="M0,0 L0,0.75075 L0,1.50075 L0,22.50075 L0,23.25075 L0,24 L22.5,24 L24,24 L24,0 L0,0 Z M1.5,19.5 L22.5,19.5 L22.5,1.50075 L1.5,1.50075 L1.5,19.5 Z M1.5,22.50075 L22.5,22.50075 L22.5,21.00075 L1.5,21.00075 L1.5,22.50075 Z" id="Fill-1"></path>
+            <path d="M4.5,10.5 L13.5,10.5 L13.5,6 L4.5,6 L4.5,10.5 Z M19.5,10.5 L19.5,15 L9,15 L9,12 L15,12 L15,10.5 L19.5,10.5 Z M7.5,12 L7.5,15 L7.5,15.75 L7.5,16.5 L19.5,16.5 L20.25,16.5 L21,16.5 L21,10.5 L21,9.75 L21,9 L15,9 L15,4.5 L3,4.5 L3,12 L7.5,12 Z" id="Fill-2"></path>
+        </g>
+    </g>
+</svg>

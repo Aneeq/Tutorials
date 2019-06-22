@@ -1,0 +1,147 @@
+﻿/*---------------------SBX - Hero Banner Homepage-------|START----------*/
+.SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content-heading {
+     color: #fff;
+     margin:0px;
+     font-size: 36px;
+     font-weight: 300;
+     line-height: 1.2;
+}
+ .SBX-redesign .dc-hero-banner-home .cm-mobile-bg-image{
+     display: none;
+}
+ .SBX-redesign .dc-hero-banner-home .banner-content .banner-content-ctas a:last-child{
+     color: #fff;
+     text-decoration: none;
+     padding-left: 30px;
+     font-size: 18px;
+    /*text-transform: uppercase;
+    */
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper div.banner-content-ctas a:first-child {
+     background: #00b6c3;
+     padding: 14px 24px;
+     display: inline-block;
+     color: #333;
+     font-size: 13px;
+     line-height: 1.2;
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content .banner-content-ctas{
+     padding: 27px 0 27px 0;
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content-ctas a:first-child:focus{
+     background-color: #FFF !important;
+     color: #000000 !important;
+     outline: 2px #00B7C3 solid !important;
+     text-decoration: none;
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content-ctas a:first-child:hover{
+     background-color: #FFF !important;
+     color: #000000 !important;
+     text-decoration: none;
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content-ctas a:last-child:focus, .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content-ctas a:last-child:hover{
+     text-decoration: underline 
+}
+ .SBX-redesign .dc-hero-banner-home .dc-full-width-banner-container{
+     position: relative;
+}
+ .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper p.banner-content-sub-heading {
+     color: #fff;
+     font-size: 18px;
+     font-weight: normal;
+     font-style: normal;
+     font-stretch: normal;
+     line-height: 1.33;
+     padding: 27px 0 27px 0;
+}
+ @media (min-width:1800px){
+     .SBX-redesign .dc-hero-banner-home .banner-content {
+         margin: 0 5.5% !important;
+    }
+}
+ @media (min-width:767px){
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper{
+        /* display: flex;
+         flex-direction: column;
+         justify-content: center;
+         */
+         max-width: calc(1600px + 10%);
+         margin: 0 auto;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content{
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         margin: 0 5%;
+         width: 55%;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper .banner-content {
+         max-width: 50%;
+    }
+}
+ @media (min-width:767px) and (max-width:940px){
+     .SBX-redesign .dc-hero-banner-home .banner-content{
+         top: 25%;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper h1.banner-content-heading{
+         font-size: 32px;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper p.banner-content-sub-heading{
+         font-size: 14px;
+    }
+}
+ @media (max-width:768px){
+     .SBX-redesign .dc-hero-banner-home .cm-mobile-bg-image{
+         display: block;
+         min-height: 300px;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper{
+         background-image: none, none !important;
+         text-align: center;
+         background-color: #002050;
+    }
+     .SBX-redesign .dc-hero-banner-home .banner-content-ctas a{
+         display: block;
+    }
+     .SBX-redesign .dc-hero-banner-home .banner-content-ctas a:last-child{
+         padding: 27px 0 0 0;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper p.banner-content-sub-heading{
+         padding-bottom: 0;
+         padding-top: 12px;
+         margin : 0 auto 
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper h1.banner-content-heading{
+         padding-top: 20px;
+    }
+     .SBX-redesign .dc-hero-banner-home.cm-full-width-banner-wrapper img{
+         width: 100%;
+         max-width: 100%;
+         height: auto;
+    }
+}
+@media only screen and (max-width: 1083px) and (min-width: 768px){
+    .c-uhfh .c-pivot-menu>.c-uhf-menu:first-of-type>button {
+        max-width: none !important;
+    }
+    .c-uhfh .c-pivot-menu .c-uhf-menu ul {
+        max-width: none !important;
+    }
+}
+/*---------------------SBX - Hero Banner Homepage-------|END----------*/
+
+/*Not Found page styling | start*/
+.custom-container.dc-not-found {
+    margin:40px auto;
+}
+
+.custom-container.dc-not-found h3{
+    margin:20px 0;
+}
+/*Not Found page styling | end*/
+
+/*for fixing extra right space in devices*/
+html{
+    overflow-x: hidden;
+}
+/*end*/
