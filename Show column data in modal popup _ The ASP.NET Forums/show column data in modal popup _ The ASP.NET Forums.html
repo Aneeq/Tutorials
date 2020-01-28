@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://forums.asp.net/t/2141486.aspx?show+column+data+in+modal+popup -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- build date: Wed, 06 Nov 2019 15:38:48 GMT -->
+	<title>show column data in modal popup | The ASP.NET Forums</title>
+	
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="alternate" type="application/rss+xml" title="show column data in modal popup RSS" href="https://forums.asp.net/t/rss/2141486">
+    
+
+<meta name="description" content="I have 6 columns in MVC datatable. i can show 5 columns in datatable but would like to show 6th column(Notes) in modal popup. Can someone help me how to show that data in modal popup. below is the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@aspnet">
+<meta name="twitter:domain" content="forums.asp.net">
+<meta name="twitter:image:src" content="https://forums-asp.azureedge.net/resources/v-2019-07-08-001/cheetah/style/images/ui/asplogo-square.png">
+<meta name="twitter:title" content="show column data in modal popup">
+<meta name="twitter:description" content="I have 6 columns in MVC datatable. i can show 5 columns in datatable but would like to show 6th column(Notes) in modal popup. Can someone help me how to show that data in modal popup. below is the...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="show column data in modal popup">
+<meta property="og:description" content="I have 6 columns in MVC datatable. i can show 5 columns in datatable but would like to show 6th column(Notes) in modal popup. Can someone help me how to show that data in modal popup. below is the...">
+<meta property="og:image" content="https://forums-asp.azureedge.net/resources/v-2019-07-08-001/cheetah/style/images/ui/asplogo-square.png">
+<meta property="og:url" content="https://forums.asp.net/t/2141486.aspx?show+column+data+in+modal+popup">
+<meta property="og:site_name" content="The Official Forums for Microsoft ASP.NET">
+<meta property="fb:admins" content="scott.hanselman">
+<meta property="fb:admins" content="jon.galloway">
+<meta property="fb:admins" content="robmcm">
+
+
+    <link rel="canonical" href="https://forums.asp.net/t/2141486.aspx?show+column+data+in+modal+popup">
+
+    <link rel="search" type="application/opensearchdescription+xml" title="Forums.asp.net" href="https://forums.asp.net/opensearch.xml">
+	<link href="https://forums-asp.azureedge.net/resources/v-2019-07-08-001/favicon.ico" rel="shortcut icon">    
+    
+	
+		<link href="./show column data in modal popup _ The ASP.NET Forums_files/common-responsive.css" rel="stylesheet" type="text/css" media="all">
+	
+    
+		
+	
+	<!--[if lte IE 9]>
+      <script src='https://forums-asp.azureedge.net/resources/v-2019-07-08-001/scripts/html5.js' type="text/javascript"></script>
+    <![endif]-->
+    <script async="" src="./show column data in modal popup _ The ASP.NET Forums_files/analytics.js.download"></script><script type="text/javascript" src="./show column data in modal popup _ The ASP.NET Forums_files/jquery-1.8.3.min.js.download"></script>
+	<script type="text/javascript">$.ajaxSetup({ cache: false }); var isProd = true;</script>
+	
+
+    
+	
+	<script type="text/javascript">if (self === top) { var antiClickjack = document.getElementById("antiClickjack"); antiClickjack.parentNode.removeChild(antiClickjack) } else top.location = self.location;</script>
+
+    
+
+    <script type="text/javascript">var isConsentRequired = false;</script>
+
+    
+</head>
+<body class="details">	
+
+	
+
+    <div class="all-content">
+        <div style="background-color:#000;"><a href="https://live.asp.net/?utm_source=aspnet&amp;utm_medium=link&amp;utm_campaign=aspnet_banner" style="display:block;"><img src="./show column data in modal popup _ The ASP.NET Forums_files/aspnet-community-standup-banner.png" style="margin:0 auto; display:block; max-width:100%;"></a></div>
+	    <!--Edit me from backoffice - Raw - Banner-->
+<!--<div style="background-color: #672D79;padding:10px;font-size:16px;text-align:center;color:#fff;">Register for the ASP.NET Core sessions presented by Scott Hunter, Jeff Fritz, and Dan Roth from the .NET/ASP.NET team at DEVintersection 2017! <a href="https://devintersection.com/#!/Visual-Studio-ASP-Azure-Conference/" style="color:#fff;">Learn more &gt;</a></div>-->
+		<header>
+			<div class="header-content">
+				<a href="https://www.microsoft.com/" id="logo" data-s-object-id="logo">
+                    <svg version="1.1" id="svg5358" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1033.746 220.695" enable-background="new 0 0 1033.746 220.695" xml:space="preserve"><path id="path5056" fill="#706D6E" d="M1033.745,99.838v-18.18h-22.576V53.395l-0.76,0.234l-21.205,6.487l-0.417,0.128v21.414h-33.469V69.73c0-5.556,1.242-9.807,3.689-12.643c2.432-2.801,5.909-4.225,10.343-4.225c3.188,0,6.49,0.752,9.812,2.232l0.832,0.371V36.32l-0.391-0.143c-3.1-1.114-7.315-1.676-12.539-1.676c-6.585,0-12.568,1.433-17.786,4.273c-5.222,2.844-9.329,6.903-12.205,12.065c-2.868,5.156-4.322,11.111-4.322,17.702v13.115H917.03v18.18h15.721v76.59h22.567v-76.59h33.469v48.672c0,20.045,9.455,30.203,28.101,30.203c3.065,0,6.289-0.359,9.583-1.063c3.352-0.722,5.634-1.443,6.978-2.213l0.298-0.176v-18.348l-0.918,0.607c-1.225,0.816-2.75,1.483-4.539,1.979c-1.796,0.505-3.296,0.758-4.457,0.758c-4.369,0-7.6-1.177-9.606-3.5c-2.027-2.344-3.057-6.443-3.057-12.177V99.838H1033.745L1033.745,99.838z M866.634,160.26c-8.191,0-14.648-2.716-19.2-8.066c-4.578-5.377-6.898-13.043-6.898-22.783c0-10.049,2.32-17.914,6.901-23.387c4.554-5.436,10.95-8.194,19.014-8.194c7.825,0,14.054,2.635,18.515,7.836c4.485,5.228,6.76,13.03,6.76,23.196c0,10.291-2.14,18.196-6.359,23.484C881.175,157.594,874.874,160.26,866.634,160.26 M867.639,79.375c-15.627,0-28.04,4.579-36.889,13.61c-8.844,9.032-13.329,21.531-13.329,37.153c0,14.838,4.378,26.773,13.012,35.468c8.634,8.698,20.384,13.104,34.92,13.104c15.148,0,27.313-4.643,36.16-13.799c8.845-9.146,13.326-21.527,13.326-36.784c0-15.07-4.205-27.094-12.503-35.731C894.035,83.756,882.358,79.375,867.639,79.375 M781.035,79.375c-10.63,0-19.422,2.719-26.14,8.08c-6.758,5.393-10.185,12.466-10.185,21.025c0,4.448,0.739,8.4,2.195,11.752c1.466,3.363,3.733,6.324,6.744,8.809c2.99,2.465,7.603,5.047,13.718,7.674c5.139,2.115,8.973,3.904,11.407,5.314c2.38,1.382,4.07,2.771,5.023,4.124c0.927,1.323,1.398,3.136,1.398,5.372c0,6.367-4.768,9.465-14.579,9.465c-3.639,0-7.79-0.76-12.338-2.258c-4.55-1.496-8.801-3.647-12.634-6.406l-0.936-0.672v21.727l0.344,0.16c3.193,1.474,7.219,2.717,11.963,3.695c4.736,0.979,9.039,1.477,12.778,1.477c11.534,0,20.823-2.732,27.601-8.125c6.821-5.43,10.279-12.67,10.279-21.525c0-6.388-1.861-11.867-5.53-16.284c-3.643-4.382-9.965-8.405-18.785-11.961c-7.026-2.82-11.527-5.161-13.384-6.958c-1.79-1.736-2.698-4.191-2.698-7.3c0-2.756,1.121-4.964,3.425-6.753c2.321-1.797,5.551-2.711,9.604-2.711c3.76,0,7.607,0.594,11.433,1.758c3.824,1.164,7.182,2.723,9.985,4.63l0.921,0.63V83.504l-0.354-0.152c-2.587-1.109-5.996-2.059-10.138-2.828C788.029,79.761,784.288,79.375,781.035,79.375 M685.878,160.26c-8.188,0-14.648-2.716-19.198-8.066c-4.58-5.377-6.896-13.041-6.896-22.783c0-10.049,2.318-17.914,6.901-23.387c4.55-5.436,10.944-8.194,19.013-8.194c7.822,0,14.051,2.635,18.514,7.836c4.484,5.228,6.76,13.03,6.76,23.196c0,10.291-2.142,18.196-6.361,23.484C700.419,157.594,694.12,160.26,685.878,160.26 M686.886,79.375c-15.632,0-28.044,4.579-36.889,13.61c-8.844,9.032-13.331,21.531-13.331,37.153c0,14.844,4.38,26.773,13.014,35.468c8.634,8.698,20.382,13.104,34.92,13.104c15.145,0,27.313-4.643,36.16-13.799c8.842-9.146,13.326-21.527,13.326-36.784c0-15.07-4.207-27.094-12.506-35.731C713.276,83.756,701.604,79.375,686.886,79.375 M602.409,98.07V81.658h-22.293v94.767h22.293v-48.477c0-8.243,1.868-15.015,5.556-20.13c3.642-5.054,8.494-7.615,14.418-7.615c2.007,0,4.261,0.332,6.702,0.986c2.416,0.651,4.166,1.357,5.199,2.102l0.936,0.679V81.496l-0.361-0.155c-2.076-0.882-5.012-1.327-8.729-1.327c-5.602,0-10.615,1.8-14.908,5.344c-3.77,3.115-6.494,7.387-8.577,12.713H602.409L602.409,98.07z M540.195,79.375c-10.226,0-19.349,2.193-27.108,6.516c-7.775,4.333-13.787,10.52-17.879,18.385c-4.072,7.848-6.14,17.014-6.14,27.235c0,8.954,2.005,17.171,5.967,24.413c3.966,7.254,9.578,12.928,16.682,16.865c7.094,3.931,15.293,5.924,24.37,5.924c10.594,0,19.639-2.118,26.892-6.295l0.292-0.168v-20.423l-0.937,0.684c-3.285,2.393-6.956,4.303-10.906,5.679c-3.939,1.375-7.532,2.07-10.681,2.07c-8.748,0-15.769-2.737-20.866-8.133c-5.109-5.403-7.699-12.99-7.699-22.537c0-9.607,2.701-17.389,8.025-23.131c5.306-5.726,12.341-8.629,20.907-8.629c7.327,0,14.468,2.48,21.223,7.381l0.934,0.679V84.371l-0.302-0.17c-2.542-1.423-6.008-2.598-10.313-3.488C548.37,79.824,544.18,79.375,540.195,79.375 M473.715,81.658h-22.293v94.767h22.293V81.658z M462.796,41.287c-3.668,0-6.868,1.249-9.497,3.725c-2.64,2.482-3.98,5.607-3.98,9.295c0,3.629,1.324,6.697,3.938,9.113c2.598,2.408,5.808,3.63,9.54,3.63c3.731,0,6.954-1.222,9.583-3.626c2.646-2.42,3.987-5.488,3.987-9.117c0-3.559-1.305-6.652-3.879-9.195C469.918,42.574,466.656,41.287,462.796,41.287 M407.177,74.667v101.757h22.75V44.189H398.44l-40.022,98.221l-38.839-98.221h-32.769v132.234h21.379V74.657h0.734l41.013,101.767h16.134l40.372-101.757H407.177L407.177,74.667z"></path><path id="path5058" fill="#F1511B" d="M104.867,104.867H0V0h104.867V104.867z"></path><path id="path5060" fill="#80CC28" d="M220.654,104.867H115.787V0h104.867V104.867z"></path><path id="path5062" fill="#00ADEF" d="M104.865,220.695H0V115.828h104.865V220.695z"></path><path id="path5064" fill="#FBBC09" d="M220.654,220.695H115.787V115.828h104.867V220.695z"></path></svg>
+				</a>
+
+				
+
+ <div class="nav-user logged-out">
+    <a href="javascript:;" class="profile">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve"><path fill="#262626" d="M5.163,21.259h1.333c0-3.311,2.694-6.005,6.004-6.005c3.31,0,6.003,2.694,6.003,6.005h1.334c0-3.064-1.891-5.693-4.564-6.79c1.535-0.938,2.564-2.624,2.564-4.55c0-2.942-2.395-5.336-5.337-5.336c-2.943,0-5.337,2.394-5.337,5.336c0,1.926,1.03,3.611,2.564,4.55C7.054,15.565,5.163,18.194,5.163,21.259 M8.498,9.919c0-2.207,1.795-4.002,4.003-4.002c2.206,0,4.001,1.795,4.001,4.002c0,2.206-1.795,4.002-4.001,4.002C10.293,13.921,8.498,12.125,8.498,9.919"></path><circle fill="none" stroke="#262626" stroke-width="1.483" stroke-miterlimit="10" cx="12.5" cy="12.5" r="10.873"></circle></svg></a>
+	<div class="common-dropdown collapse">
+		<a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=%2ft%2f2141486.aspx%3fshow%2bcolumn%2bdata%2bin%2bmodal%2bpopup">Sign in</a>
+        <a href="https://forums.asp.net/login/RedirectToCreateUser?ReturnUrl=%2ft%2f2141486.aspx%3fshow%2bcolumn%2bdata%2bin%2bmodal%2bpopup">Join</a>
+	</div>
+</div>
+
+				<div class="search-form">
+					<input name="searchterm" type="text" class="search-input" placeholder="Search">
+					<a href="javascript:;" class="search-submit">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><path fill="#FFFFFF" d="M5.89,11.594c1.32,0,2.532-0.461,3.49-1.229l7.267,7.268c0.122,0.119,0.28,0.182,0.439,0.182s0.319-0.063,0.44-0.182c0.242-0.244,0.242-0.639,0-0.881L10.26,9.486c0.767-0.958,1.229-2.17,1.229-3.49c0-3.087-2.511-5.598-5.599-5.598c-3.087,0-5.598,2.511-5.598,5.598S2.803,11.594,5.89,11.594 M5.89,1.642c2.401,0,4.354,1.953,4.354,4.354S8.291,10.35,5.89,10.35c-2.4,0-4.354-1.953-4.354-4.354S3.489,1.642,5.89,1.642"></path></svg>
+					</a>
+				</div>
+	
+					
+                <nav class="clearfix nav-main">
+                    <div>
+                        <a href="javascript:;" class="icon"></a>
+                        <a href="https://dotnet.microsoft.com/" class="c-logo c-cat-logo" data-s-object-id="navlogo"><span>.NET</span></a>
+                        <ul>
+                            <li><a href="https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet">About</a></li>
+                            <li><a href="https://dotnet.microsoft.com/learn">Learn</a></li>
+                            <li><a href="https://dotnet.microsoft.com/learn/dotnet/architecture-guides">Architecture</a></li>
+                            <li><a href="https://docs.microsoft.com/en-us/dotnet/">Docs</a></li>
+                            <li><a href="https://dotnet.microsoft.com/download">Downloads</a></li>
+                            <li><a href="https://dotnet.microsoft.com/platform/community">Community</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+        </header>
+
+		
+
+        
+
+<div class="header-breadcrumb-content">
+    <a href="https://forums.asp.net/" title="ASP.NET Forums">ASP.NET Forums</a><span>/</span><a href="https://forums.asp.net/default.aspx/7?General+ASP+NET" title="General ASP.NET">General ASP.NET</a><span>/</span><a href="https://forums.asp.net/1146.aspx/1?MVC" title="MVC">MVC</a><span>/</span><a href="https://forums.asp.net/t/2141486.aspx?show+column+data+in+modal+popup" title="show column data in modal popup">show column data in modal popup</a>
+</div>
+
+
+	
+
+	<div class="content-wrapper" id="content-wrapper">
+		
+		<h1 id="threadstatus" class="icon-rss-head icon-answered indent no-border" title="show column data in modal popup">show column data in modal popup&nbsp;<span class="print-only-inline">[Answered]</span><a class="icon" href="https://forums.asp.net/t/rss/2141486" title="Feed - show column data in modal popup">RSS</a>
+		</h1>
+		<div class="comment-count">
+			<h2>5 replies        
+				            
+			</h2>
+			
+				<p><a href="https://forums.asp.net/p/2141486/6209713.aspx?Re+show+column+data+in+modal+popup">Last post</a> May 30, 2018 05:11 PM by <a href="https://forums.asp.net/members/hozefa_unwala.aspx" title="View hozefa_unwala&#39;s profile">hozefa_unwala</a></p>
+				
+			
+		</div>
+		<div class="pagination-thread first"><a href="https://forums.asp.net/t/prev/2141486">‹ Previous Thread</a><span class="separator">|</span><a href="https://forums.asp.net/t/next/2141486">Next Thread ›</a></div>
+		<div class="clear"></div>
+		<div class="share">
+			<a href="javascript:window.print();" class="share-print" title="Print">Print</a>
+			<a href="javascript:;" class="common-btn share-btn">Share</a>	
+			<div class="share-details" style="display:none;">
+				<ul>
+					<li><a href="https://twitter.com/share?url=https%3a%2f%2fforums.asp.net%2ft%2f2141486.aspx%3fshow%2bcolumn%2bdata%2bin%2bmodal%2bpopup" class="twitter" title="Twitter"><span></span>Twitter</a></li>
+					<li><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fforums.asp.net%2ft%2f2141486.aspx%3fshow%2bcolumn%2bdata%2bin%2bmodal%2bpopup" class="facebook" title="Facebook"><span></span>Facebook</a></li>
+					<li><a href="mailto:?body=https%3a%2f%2fforums.asp.net%2ft%2f2141486.aspx%3fshow%2bcolumn%2bdata%2bin%2bmodal%2bpopup" class="email" title="Email"><span></span>Email</a></li>
+				</ul>
+			</div>
+		</div>
+		
+
+<div class="module-nav-container">
+	<div class="module-nav nav-base">
+		<h2>Shortcuts</h2>
+		<ul>
+			<li><a href="https://forums.asp.net/f/active/1146/1/20">Active Threads</a></li>
+			<li><a href="https://forums.asp.net/f/unanswered/1146/1/20">Unanswered Threads</a></li>
+			<li><a href="https://forums.asp.net/f/unresolved/1146/1/20">Unresolved Threads</a></li>
+			
+			
+			<li><a href="https://www.asp.net/community/support">Support Options</a></li>
+			<li><a href="https://forums.asp.net/search">Advanced Search</a></li>
+		</ul>
+	</div>
+
+	
+	<div class="module-nav nav-base">
+		<h2>Related Links</h2>
+		<ul>
+            <li><a href="https://www.asp.net/mvc">Guidance</a></li><li><a href="https://www.asp.net/aspnet/samples/aspnet-mvc">Samples</a></li><li><a href="https://www.asp.net/mvc/videos">Videos</a></li>
+		</ul>
+	</div>
+	
+</div>
+		<ul class="comment-list">
+			   
+     
+<li class="comment-wrap thread-starter  " data-postid="6209514" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209514">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="hozefa_unwala" href="https://forums.asp.net/members/hozefa_unwala.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/hozefa_unwala.jpg" alt="hozefa_unwala" title="hozefa_unwala">
+    hozefa_unwal...
+</a>
+
+<p class="post-level">Member</p>
+<div class="post-rating Member" title="16 Points"></div>
+<p class="post-points">16 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28hozefa_unwala%29&amp;s=createdDate&amp;d=desc">148 Posts</a></p>
+
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209514"></a>      
+        <h3>show column data in modal popup</h3>
+        <p class="date">May 29, 2018 06:12 PM<span class="print-only-inline"><span class="separator">|</span>hozefa_unwala</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209514.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>I have 6 columns in MVC datatable. i can show 5 columns in datatable but would like to show 6th column(Notes) in modal popup. Can someone help me how to show that data in modal popup. below is the example</p>
+<p></p>
+<p>Last Name&nbsp; &nbsp; &nbsp; &nbsp; First Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Salary&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Department&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Position&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ViewDetails</p>
+<p>ABC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xyz&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; IT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Clerk&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Details</p>
+<p></p>
+<p>By clicking on Details, I would like to see the notes column.</p>
+<p></p>
+<p>Thanks.</p>
+</div>		
+                 
+    </div>	
+    
+</li>
+   
+     
+<li class="comment-wrap   " data-postid="6209601" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209601">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="ignatandrei" href="https://forums.asp.net/members/ignatandrei.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/ignatandrei.jpg" alt="ignatandrei" title="ignatandrei">
+    ignatandrei
+</a>
+
+<p class="post-level">All-Star</p>
+<div class="post-rating All-Star" title="120084 Points"></div>
+<p class="post-points">120084 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28ignatandrei%29&amp;s=createdDate&amp;d=desc">27963 Posts</a></p>
+<p class="post-badge moderator" title="Moderator of the forums">Moderator</p><p class="post-badge mvp" title="Microsoft MVP for ASP.NET">MVP</p>
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209601"></a>      
+        <h3>Re: show column data in modal popup</h3>
+        <p class="date">May 30, 2018 07:08 AM<span class="print-only-inline"><span class="separator">|</span>ignatandrei</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209601.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>Put the Notes in a popup like for hte&nbsp;<a href="https://jqueryui.com/dialog/">https://jqueryui.com/dialog/</a></p>
+<p>The ID of the popup should be unique by row , so you can put a simple javascript to show the popup with that id.</p>
+<p></p>
+</div>		
+                 
+    </div>	
+    
+        <div class="comment-signiture">
+            <a href="http://msprogrammer.serviciipeweb.ro/personal-trainer-in-net-asp-net-mvc-vba-sql-server/" rel="nofollow">.NET Teacher</a> | <a href="https://www.youtube.com/playlist?list=PL4aSKgR4yk4OnmJW6PlBuDOXdYk6zTGps" rel="nofollow">.NET Videos 5 minutes</a>
+        </div>
+    
+</li>
+   
+     
+<li class="comment-wrap  answered " data-postid="6209612" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209612">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="Yuki Tao" href="https://forums.asp.net/members/Yuki%20Tao.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/Yuki Tao.jpg" alt="Yuki Tao" title="Yuki Tao">
+    Yuki Tao
+</a>
+
+<p class="post-level">Contributor</p>
+<div class="post-rating Contributor" title="3670 Points"></div>
+<p class="post-points">3670 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28Yuki%20Tao%29&amp;s=createdDate&amp;d=desc">1431 Posts</a></p>
+
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209612"></a>      
+        <h3>Re: show column data in modal popup</h3>
+        <p class="date">May 30, 2018 08:58 AM<span class="print-only-inline"><span class="separator">|</span>Yuki Tao</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209612.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>Hi&nbsp;Hozefa Unwala，</p>
+<p></p>
+<blockquote><span class="icon-blockquote"></span>
+<h4>hozefa_unwala</h4>
+I have 6 columns in MVC datatable. i can show 5 columns in datatable but would like to show 6th column(Notes) in modal popup. Can someone help me how to show that data in modal popup. below is the example</blockquote>
+<p></p>
+<p>According to your description, I suggest you could use&nbsp;<span style="font-size:13.008px">Partial View to get more data from sql db to view.</span></p>
+<p><span style="font-size:13.008px">Then you could use model popup to show the&nbsp;Partial View when user click the details button.</span></p>
+<p>I make a demo, you could refer to it.</p>
+<p>Index View:</p>
+<pre class="prettyprint lang-auto prettyprinted" style=""><span class="pln">@model IEnumerable</span><span class="tag">&lt;WebApplication1.Models.Employee&gt;</span><span class="pln">
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'myModal'</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">'modal'</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-dialog"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-content"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'myModalContent'</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"table"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">FirstName</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">LastName</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">Salary</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">Department</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">Position</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">ViewDetails</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;th&gt;</span><span class="pln">Details</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+    @foreach (var item in Model)
+    {
+
+        </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.FirstName)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.LastName)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.Salary)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.Department)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.Position)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+                @Html.DisplayFor(modelItem =&gt; item.ViewDetails)
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;td&gt;</span><span class="pln">
+           
+                </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"anchorDetail"</span><span class="pln"> </span><span class="atn">data-id</span><span class="pun">=</span><span class="atv">"@item.Id"</span><span class="tag">&gt;</span><span class="pln">Details</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+
+            </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+    }
+
+</span><span class="tag">&lt;/table&gt;</span><span class="pln">
+
+
+@section scripts
+{
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"~/Scripts/jquery-1.10.2.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"~/Scripts/bootstrap.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"~/Scripts/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script&gt;</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> </span><span class="typ">TeamDetailPostBackURL</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'/Authors/myModal'</span><span class="pun">;</span><span class="pln">
+        $</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">".anchorDetail"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">var</span><span class="pln"> $buttonClicked </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span><span class="pln">
+                </span><span class="kwd">var</span><span class="pln"> id </span><span class="pun">=</span><span class="pln"> $buttonClicked</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'data-id'</span><span class="pun">);</span><span class="pln">
+                $</span><span class="pun">.</span><span class="pln">ajax</span><span class="pun">({</span><span class="pln">
+                    type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"GET"</span><span class="pun">,</span><span class="pln">
+                    url</span><span class="pun">:</span><span class="pln"> </span><span class="typ">TeamDetailPostBackURL</span><span class="pun">,</span><span class="pln">
+                    contentType</span><span class="pun">:</span><span class="pln"> </span><span class="str">"application/json; charset=utf-8"</span><span class="pun">,</span><span class="pln">
+                    data</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"Id"</span><span class="pun">:</span><span class="pln"> id </span><span class="pun">},</span><span class="pln">
+                    datatype</span><span class="pun">:</span><span class="pln"> </span><span class="str">"json"</span><span class="pun">,</span><span class="pln">
+                    success</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        $</span><span class="pun">(</span><span class="str">'#myModalContent'</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="pln">data</span><span class="pun">);</span><span class="pln">
+                        $</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">);</span><span class="pln">
+
+                    </span><span class="pun">},</span><span class="pln">
+                    error</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        alert</span><span class="pun">(</span><span class="str">"Dynamic content load failed."</span><span class="pun">);</span><span class="pln">
+                    </span><span class="pun">}</span><span class="pln">
+                </span><span class="pun">});</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+
+    </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+
+}  </span></pre>
+<p>Controller:</p>
+<pre class="prettyprint lang-auto prettyprinted" style=""><span class="pln">  </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">ActionResult</span><span class="pln"> </span><span class="typ">Index</span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="typ">ViewBag</span><span class="pun">.</span><span class="pln">type </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">View</span><span class="pun">(</span><span class="pln">db</span><span class="pun">.</span><span class="typ">Employees</span><span class="pun">.</span><span class="typ">ToList</span><span class="pun">());</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">ActionResult</span><span class="pln"> myModal</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> </span><span class="typ">Id</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="typ">ViewBag</span><span class="pun">.</span><span class="pln">type </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+            </span><span class="typ">Employee</span><span class="pln"> employee </span><span class="pun">=</span><span class="pln"> db</span><span class="pun">.</span><span class="typ">Employees</span><span class="pun">.</span><span class="typ">Find</span><span class="pun">(</span><span class="typ">Id</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">employee </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">HttpNotFound</span><span class="pun">();</span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">PartialView</span><span class="pun">(</span><span class="str">"_myModal"</span><span class="pun">,</span><span class="pln"> employee</span><span class="pun">);</span><span class="pln">
+
+        </span><span class="pun">}</span></pre>
+<p>_myModal Partial View:</p>
+<pre class="prettyprint lang-auto prettyprinted" style=""><span class="pln">@model WebApplication1.Models.Employee
+
+</span><span class="tag">&lt;div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-header"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span><span class="pln"> </span><span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">aria-label</span><span class="pun">=</span><span class="atv">"Close"</span><span class="tag">&gt;&lt;span</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;</span><span class="pln">&amp;times;</span><span class="tag">&lt;/span&gt;&lt;/button&gt;</span><span class="pln">
+        </span><span class="tag">&lt;h4</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-title"</span><span class="tag">&gt;</span><span class="pln">Details</span><span class="tag">&lt;/h4&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-body"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tablemodel"</span><span class="tag">&gt;</span><span class="pln">
+        
+                </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+                     </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+                         Notes:
+                     </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+                        @Html.DisplayFor(Model =&gt; Model.Notes)
+                    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+          
+        </span><span class="tag">&lt;/table&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-footer"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-default"</span><span class="pln"> </span><span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span><span class="tag">&gt;</span><span class="pln">Close</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+<p>How it works:</p>
+<p><img src="./show column data in modal popup _ The ASP.NET Forums_files/modelpopup5.gif" alt="" width="785" height="454"></p>
+<p>Best Regards.</p>
+<p>Yuki Tao</p>
+</div>		
+                 
+    </div>	
+    
+        <div class="comment-signiture">
+            MSDN Community Support 
+<br>Please remember to click "Mark as Answer" the responses that resolved your issue. 
+<br>If you have any compliments or complaints to MSDN Support, feel free to contact MSDNFSF@microsoft.com. 
+<br>
+        </div>
+    
+</li>
+   
+     
+<li class="comment-wrap   " data-postid="6209621" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209621">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="vahid bakkhi" href="https://forums.asp.net/members/vahid%20bakkhi.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/vahid bakkhi.jpg" alt="vahid bakkhi" title="vahid bakkhi">
+    vahid bakkhi
+</a>
+
+<p class="post-level">Star</p>
+<div class="post-rating Star" title="8089 Points"></div>
+<p class="post-points">8089 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28vahid%20bakkhi%29&amp;s=createdDate&amp;d=desc">2778 Posts</a></p>
+
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209621"></a>      
+        <h3>Re: show column data in modal popup</h3>
+        <p class="date">May 30, 2018 09:46 AM<span class="print-only-inline"><span class="separator">|</span>vahid bakkhi</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209621.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>hi</p>
+<p>you can pass your parameters with jquery to model below like :</p>
+<pre class="prettyprint lang-auto prettyprinted" style=""><span class="pln">@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"~/Content/bootstrap.min.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"~/Scripts/jquery-1.10.2.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"~/Scripts/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script&gt;</span><span class="pln">
+    $</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">".btn"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            
+
+            </span><span class="kwd">var</span><span class="pln"> $row </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">closest</span><span class="pun">(</span><span class="str">"tr"</span><span class="pun">),</span><span class="pln">       </span><span class="com">// Finds the closest row &lt;tr&gt; </span><span class="pln">
+                $tds </span><span class="pun">=</span><span class="pln"> $row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"td"</span><span class="pun">);</span><span class="pln">             </span><span class="com">// Finds all children &lt;td&gt; elements</span><span class="pln">
+
+            $</span><span class="pun">(</span><span class="str">"#firstName"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="pln">$row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'td:eq(0)'</span><span class="pun">).</span><span class="pln">text</span><span class="pun">())</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#lastName"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="pln">$row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'td:eq(1)'</span><span class="pun">).</span><span class="pln">text</span><span class="pun">())</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#salary"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="pln">$row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'td:eq(2)'</span><span class="pun">).</span><span class="pln">text</span><span class="pun">())</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#department"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="pln">$row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'td:eq(3)'</span><span class="pun">).</span><span class="pln">text</span><span class="pun">())</span><span class="pln">
+            $</span><span class="pun">(</span><span class="str">"#position"</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="pln">$row</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'td:eq(4)'</span><span class="pun">).</span><span class="pln">text</span><span class="pun">())</span><span class="pln">
+           
+             
+            
+        </span><span class="pun">});</span><span class="pln">
+        </span><span class="com">//$('.table').find('tr').click(function () {</span><span class="pln">
+        </span><span class="com">//    alert('You clicked row ' + ($(this).index()));</span><span class="pln">
+        </span><span class="com">//});</span><span class="pln">
+        
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"table"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">FirstName</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">LastName</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">Salary</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">Department</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">Position</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;</span><span class="pln">ViewDetails</span><span class="tag">&lt;/th&gt;</span><span class="pln">
+        </span><span class="tag">&lt;th&gt;&lt;/th&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">ABC</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">xyz</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">10000</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">IT</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">Clerk</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">Details</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;button</span><span class="pln">  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln">  </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#exampleModal"</span><span class="tag">&gt;</span><span class="pln">
+                Launch demo modal
+            </span><span class="tag">&lt;/button&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+    </span><span class="tag">&lt;tr&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">ABC2</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">xyz2</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">10000</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">IT2</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">Clerk2</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">Details2</span><span class="tag">&lt;/td&gt;</span><span class="pln">
+        </span><span class="tag">&lt;td&gt;</span><span class="pln">
+            </span><span class="tag">&lt;button</span><span class="pln">  </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#exampleModal"</span><span class="tag">&gt;</span><span class="pln">
+                Launch demo modal
+            </span><span class="tag">&lt;/button&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/td&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/tr&gt;</span><span class="pln">
+</span><span class="tag">&lt;/table&gt;</span><span class="pln">
+
+
+</span><span class="com">&lt;!-- Modal --&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal fade"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"exampleModal"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"-1"</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"dialog"</span><span class="pln"> </span><span class="atn">aria-labelledby</span><span class="pun">=</span><span class="atv">"exampleModalLabel"</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#exampleModal"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-dialog"</span><span class="pln"> </span><span class="atn">role</span><span class="pun">=</span><span class="atv">"document"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-content"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-header"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;h5</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-title"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"exampleModalLabel"</span><span class="tag">&gt;</span><span class="pln">Modal title</span><span class="tag">&lt;/h5&gt;</span><span class="pln">
+                </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span><span class="pln"> </span><span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">aria-label</span><span class="pun">=</span><span class="atv">"Close"</span><span class="tag">&gt;</span><span class="pln">
+                    </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;</span><span class="pln">&amp;times;</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/button&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-body"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-group"</span><span class="tag">&gt;</span><span class="pln">
+                    FirstName : </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"firstName"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-group"</span><span class="tag">&gt;</span><span class="pln">
+                    LastName : </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lastName"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-group"</span><span class="tag">&gt;</span><span class="pln">
+                    Salary : </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"salary"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-group"</span><span class="tag">&gt;</span><span class="pln">
+                    Department : </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"department"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"form-group"</span><span class="tag">&gt;</span><span class="pln">
+                    Position : </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"position"</span><span class="tag">/&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-footer"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-secondary"</span><span class="pln"> </span><span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span><span class="tag">&gt;</span><span class="pln">Close</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+                </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="tag">&gt;</span><span class="pln">Save changes</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+            </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span></pre>
+<p>&nbsp;<a href="https://jsfiddle.net/m1au7pmu/">Demo</a></p>
+</div>		
+                 
+    </div>	
+    
+        <div class="comment-signiture">
+            vahid bakhtiary
+<br>
+<br>Please MARK AS ANSWER if suggestion helps. 
+        </div>
+    
+</li>
+   
+     
+<li class="comment-wrap thread-starter  " data-postid="6209712" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209712">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="hozefa_unwala" href="https://forums.asp.net/members/hozefa_unwala.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/hozefa_unwala.jpg" alt="hozefa_unwala" title="hozefa_unwala">
+    hozefa_unwal...
+</a>
+
+<p class="post-level">Member</p>
+<div class="post-rating Member" title="16 Points"></div>
+<p class="post-points">16 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28hozefa_unwala%29&amp;s=createdDate&amp;d=desc">148 Posts</a></p>
+
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209712"></a>      
+        <h3>Re: show column data in modal popup</h3>
+        <p class="date">May 30, 2018 05:10 PM<span class="print-only-inline"><span class="separator">|</span>hozefa_unwala</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209712.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>By mistake. I tried different person's answer.</p>
+</div>		
+                 
+    </div>	
+    
+</li>
+   
+     
+<li class="comment-wrap thread-starter  " data-postid="6209713" title="">
+    <ul class="comment-nav">                    
+        
+                <li><a href="https://forums.asp.net/login/RedirectToLogin?ReturnUrl=/post/set/1146/2141486/6209713">Reply</a></li>
+            
+    </ul>
+    <div class="comment-left-col">
+        
+
+<a title="hozefa_unwala" href="https://forums.asp.net/members/hozefa_unwala.aspx" class="post-title">
+    
+    <img class="post-thumb" src="./show column data in modal popup _ The ASP.NET Forums_files/hozefa_unwala.jpg" alt="hozefa_unwala" title="hozefa_unwala">
+    hozefa_unwal...
+</a>
+
+<p class="post-level">Member</p>
+<div class="post-rating Member" title="16 Points"></div>
+<p class="post-points">16 Points</p>
+
+<p class="post-count"><a href="https://forums.asp.net/search?q=authors%3A%28hozefa_unwala%29&amp;s=createdDate&amp;d=desc">148 Posts</a></p>
+
+    </div>
+    <div class="comment-right-col comment-body">                      
+        <a name="6209713"></a>      
+        <h3>Re: show column data in modal popup</h3>
+        <p class="date">May 30, 2018 05:11 PM<span class="print-only-inline"><span class="separator">|</span>hozefa_unwala</span><span class="print-no responsive-no"><span class="separator">|</span><a href="https://forums.asp.net/post/6209713.aspx" title="Permalink to this post">LINK</a></span>
+        </p><div>
+<p>Your code works. Bunch of thanks.</p>
+</div>		
+                 
+    </div>	
+    
+</li>
+
+		</ul>		
+		<div class="clear"></div>		
+		<div class="pagination-thread"><a href="https://forums.asp.net/t/prev/2141486">‹ Previous Thread</a><span class="separator">|</span><a href="https://forums.asp.net/t/next/2141486">Next Thread ›</a></div>
+	</div>
+
+
+        
+        <form id="__AjaxAntiForgeryForm" action="https://forums.asp.net/t/2141486.aspx?show+column+data+in+modal+popup#" method="post" aria-label="hidden form"><input name="__RequestVerificationToken" type="hidden" value="it7eCf5zoOc6jO4EqZSzGOQWknNYnO3WaNbgWgcBo7kQ5BQGMJzG4Q2mkReOtWvGBY_8WMFP9lPkHA1QMJu9gwDrLvE1"></form>
+
+		
+			<div class="ad-728x90" style="height:0px;"></div>		
+		<footer>
+			<div class="footer">
+<div class="clear"></div>
+<ul class="footer-menu">
+<li class="block">
+<h2>This site is managed for Microsoft by Neudesic, LLC. | © 2020 Microsoft. All rights reserved.</h2>
+</li>
+<li><a href="https://go.microsoft.com/fwlink/?LinkId=521839" data-s-object-id="footer" data-mscc-ic="false">Privacy Statement</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/terms-of-use" data-s-object-id="footer" data-mscc-ic="false">Terms of Use</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/contact-us" data-s-object-id="footer">Contact Us</a><span class="separator">|</span></li>
+<li><a href="https://www.effectusmedia.com/?site=asp#contactus" data-s-object-id="footer">Advertise with Us</a><span class="separator">|</span></li>
+<li><a href="https://www.umbraco.org/" data-s-object-id="footer">CMS by Umbraco</a><span class="separator">|</span></li>
+<li><a href="https://azure.microsoft.com/">Hosted on Microsoft Azure</a></li></ul>
+<ul class="footer-menu last">
+<li class="block">
+<h2><a class="logo-microsoft" title="Microsoft" href="https://microsoft.com/" data-s-object-id="footer">
+<svg version="1.1" id="svg5358" xmlns:svg="https://www.w3.org/2000/svg" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 220.654 220.695" enable-background="new 0 0 220.654 220.695" xml:space="preserve">
+<path id="path5058" fill="#F1511B" d="M104.867,104.867H0V0h104.867V104.867z"></path>
+<path id="path5060" fill="#80CC28" d="M220.654,104.867H115.787V0h104.867V104.867z"></path>
+<path id="path5062" fill="#00ADEF" d="M104.865,220.695H0V115.828h104.865V220.695z"></path>
+<path id="path5064" fill="#FBBC09" d="M220.654,220.695H115.787V115.828h104.867V220.695z"></path>
+</svg>
+</a></h2>
+</li>
+<li><a href="https://aspnet.uservoice.com/" data-s-object-id="footer">Feedback on ASP.NET</a><span class="separator">|</span></li>
+<li><a href="https://github.com/aspnet/Home/blob/master/CONTRIBUTING.md#bugs-and-feature-requests" data-s-object-id="footer">File Bugs</a><span class="separator">|</span></li>
+<li><a href="https://www.asp.net/support">Support Lifecycle</a></li>
+</ul>
+</div>
+		</footer>
+    </div>
+
+    <script type="text/javascript">var searchDomain = "https://www.asp.net";</script>
+	<script type="text/javascript" src="./show column data in modal popup _ The ASP.NET Forums_files/cheetah-main.js.download"></script>
+    
+    
+    
+
+	
+    
+    
+    
+    
+    
+	<script type="text/javascript">
+        $(document).ready(function()
+        {         
+            //-- Scroll post route into view
+            var postMatches = window.location.href.match("/p/[0-9]+/([0-9]+)");
+            if (postMatches != null && postMatches.length > 1) {
+                var elem = $('a[name="' + postMatches[1] + '"]');
+                if (elem != null && elem.offset() != null) {
+                    $(document).scrollTop(elem.offset().top);
+                }
+            }
+			
+            $(".share-btn").click(function () {
+            	$(".share-details").slideToggle("fast");
+            });
+
+            
+        });
+    </script>
+
+	 
+
+<script type="text/javascript" src="./show column data in modal popup _ The ASP.NET Forums_files/prettify.js.download"></script>
+<script type="text/javascript">
+    $(document).ready(function () {        
+		
+		
+    });    
+</script>
+
+    
+    
+	<script type="text/javascript">if ((Math.floor(Math.random() * 100)) < 0) { $.getScript('/v-2019-07-08-001/resources/scripts/scripts-bundle/survey.js'); }</script>
+	
+	<script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-61337531-1', 'auto');
+        ga('send', 'pageview');
+	</script>
+    
+
+	<div class="modal-cover" style="display:none;"></div>
+
+
+</body></html>
